@@ -15,7 +15,9 @@
      </file>
    </example>
  */
-angular.module('rfx', []).directive('rAutogrow', function() {
+angular.module('rfx', [])
+.animation('.test', function() {})
+.directive('rAutogrow', function() {
   // add helper vor measurement to body
     var testObj = angular.element('<textarea id="autogrow-helper" style="height: 0; position: absolute; top: -999px"/>');
     angular.element(window.document.body).append(testObj);
